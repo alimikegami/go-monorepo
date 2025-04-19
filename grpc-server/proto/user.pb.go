@@ -2,18 +2,17 @@
 // versions:
 // 	protoc-gen-go v1.36.6
 // 	protoc        v5.28.3
-// source: proto/user.proto
+// source: grpc-server/proto/user.proto
 
 package proto
 
 import (
-	reflect "reflect"
-	sync "sync"
-	unsafe "unsafe"
-
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	emptypb "google.golang.org/protobuf/types/known/emptypb"
+	reflect "reflect"
+	sync "sync"
+	unsafe "unsafe"
 )
 
 const (
@@ -33,7 +32,7 @@ type User struct {
 
 func (x *User) Reset() {
 	*x = User{}
-	mi := &file_proto_user_proto_msgTypes[0]
+	mi := &file_grpc_server_proto_user_proto_msgTypes[0]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -45,7 +44,7 @@ func (x *User) String() string {
 func (*User) ProtoMessage() {}
 
 func (x *User) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_user_proto_msgTypes[0]
+	mi := &file_grpc_server_proto_user_proto_msgTypes[0]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -58,7 +57,7 @@ func (x *User) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use User.ProtoReflect.Descriptor instead.
 func (*User) Descriptor() ([]byte, []int) {
-	return file_proto_user_proto_rawDescGZIP(), []int{0}
+	return file_grpc_server_proto_user_proto_rawDescGZIP(), []int{0}
 }
 
 func (x *User) GetId() int64 {
@@ -84,7 +83,7 @@ type Users struct {
 
 func (x *Users) Reset() {
 	*x = Users{}
-	mi := &file_proto_user_proto_msgTypes[1]
+	mi := &file_grpc_server_proto_user_proto_msgTypes[1]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -96,7 +95,7 @@ func (x *Users) String() string {
 func (*Users) ProtoMessage() {}
 
 func (x *Users) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_user_proto_msgTypes[1]
+	mi := &file_grpc_server_proto_user_proto_msgTypes[1]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -109,7 +108,7 @@ func (x *Users) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use Users.ProtoReflect.Descriptor instead.
 func (*Users) Descriptor() ([]byte, []int) {
-	return file_proto_user_proto_rawDescGZIP(), []int{1}
+	return file_grpc_server_proto_user_proto_rawDescGZIP(), []int{1}
 }
 
 func (x *Users) GetUsers() []*User {
@@ -119,11 +118,11 @@ func (x *Users) GetUsers() []*User {
 	return nil
 }
 
-var File_proto_user_proto protoreflect.FileDescriptor
+var File_grpc_server_proto_user_proto protoreflect.FileDescriptor
 
-const file_proto_user_proto_rawDesc = "" +
+const file_grpc_server_proto_user_proto_rawDesc = "" +
 	"\n" +
-	"\x10proto/user.proto\x12\x05proto\x1a\x1bgoogle/protobuf/empty.proto\"*\n" +
+	"\x1cgrpc-server/proto/user.proto\x12\x05proto\x1a\x1bgoogle/protobuf/empty.proto\"*\n" +
 	"\x04User\x12\x0e\n" +
 	"\x02id\x18\x01 \x01(\x03R\x02id\x12\x12\n" +
 	"\x04name\x18\x02 \x01(\tR\x04name\"*\n" +
@@ -133,26 +132,24 @@ const file_proto_user_proto_rawDesc = "" +
 	"\bGetUsers\x12\x16.google.protobuf.Empty\x1a\f.proto.Users\"\x00B6Z4github.com/alimikegami/go-monorepo/grpc-server/protob\x06proto3"
 
 var (
-	file_proto_user_proto_rawDescOnce sync.Once
-	file_proto_user_proto_rawDescData []byte
+	file_grpc_server_proto_user_proto_rawDescOnce sync.Once
+	file_grpc_server_proto_user_proto_rawDescData []byte
 )
 
-func file_proto_user_proto_rawDescGZIP() []byte {
-	file_proto_user_proto_rawDescOnce.Do(func() {
-		file_proto_user_proto_rawDescData = protoimpl.X.CompressGZIP(unsafe.Slice(unsafe.StringData(file_proto_user_proto_rawDesc), len(file_proto_user_proto_rawDesc)))
+func file_grpc_server_proto_user_proto_rawDescGZIP() []byte {
+	file_grpc_server_proto_user_proto_rawDescOnce.Do(func() {
+		file_grpc_server_proto_user_proto_rawDescData = protoimpl.X.CompressGZIP(unsafe.Slice(unsafe.StringData(file_grpc_server_proto_user_proto_rawDesc), len(file_grpc_server_proto_user_proto_rawDesc)))
 	})
-	return file_proto_user_proto_rawDescData
+	return file_grpc_server_proto_user_proto_rawDescData
 }
 
-var (
-	file_proto_user_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
-	file_proto_user_proto_goTypes  = []any{
-		(*User)(nil),          // 0: proto.User
-		(*Users)(nil),         // 1: proto.Users
-		(*emptypb.Empty)(nil), // 2: google.protobuf.Empty
-	}
-)
-var file_proto_user_proto_depIdxs = []int32{
+var file_grpc_server_proto_user_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
+var file_grpc_server_proto_user_proto_goTypes = []any{
+	(*User)(nil),          // 0: proto.User
+	(*Users)(nil),         // 1: proto.Users
+	(*emptypb.Empty)(nil), // 2: google.protobuf.Empty
+}
+var file_grpc_server_proto_user_proto_depIdxs = []int32{
 	0, // 0: proto.Users.users:type_name -> proto.User
 	2, // 1: proto.UserService.GetUsers:input_type -> google.protobuf.Empty
 	1, // 2: proto.UserService.GetUsers:output_type -> proto.Users
@@ -163,26 +160,26 @@ var file_proto_user_proto_depIdxs = []int32{
 	0, // [0:1] is the sub-list for field type_name
 }
 
-func init() { file_proto_user_proto_init() }
-func file_proto_user_proto_init() {
-	if File_proto_user_proto != nil {
+func init() { file_grpc_server_proto_user_proto_init() }
+func file_grpc_server_proto_user_proto_init() {
+	if File_grpc_server_proto_user_proto != nil {
 		return
 	}
 	type x struct{}
 	out := protoimpl.TypeBuilder{
 		File: protoimpl.DescBuilder{
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
-			RawDescriptor: unsafe.Slice(unsafe.StringData(file_proto_user_proto_rawDesc), len(file_proto_user_proto_rawDesc)),
+			RawDescriptor: unsafe.Slice(unsafe.StringData(file_grpc_server_proto_user_proto_rawDesc), len(file_grpc_server_proto_user_proto_rawDesc)),
 			NumEnums:      0,
 			NumMessages:   2,
 			NumExtensions: 0,
 			NumServices:   1,
 		},
-		GoTypes:           file_proto_user_proto_goTypes,
-		DependencyIndexes: file_proto_user_proto_depIdxs,
-		MessageInfos:      file_proto_user_proto_msgTypes,
+		GoTypes:           file_grpc_server_proto_user_proto_goTypes,
+		DependencyIndexes: file_grpc_server_proto_user_proto_depIdxs,
+		MessageInfos:      file_grpc_server_proto_user_proto_msgTypes,
 	}.Build()
-	File_proto_user_proto = out.File
-	file_proto_user_proto_goTypes = nil
-	file_proto_user_proto_depIdxs = nil
+	File_grpc_server_proto_user_proto = out.File
+	file_grpc_server_proto_user_proto_goTypes = nil
+	file_grpc_server_proto_user_proto_depIdxs = nil
 }

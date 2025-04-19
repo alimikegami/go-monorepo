@@ -6,7 +6,7 @@ import (
 	"log"
 	"net"
 
-	"github.com/alimikegami/go-monorepo/grpc-server/github.com/alimikegami/go-monorepo/grpc-server/proto"
+	"github.com/alimikegami/go-monorepo/grpc-server/proto"
 	"google.golang.org/grpc"
 	"google.golang.org/protobuf/types/known/emptypb"
 )
