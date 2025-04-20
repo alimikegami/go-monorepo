@@ -127,9 +127,11 @@ const file_grpc_server_proto_user_proto_rawDesc = "" +
 	"\x02id\x18\x01 \x01(\x03R\x02id\x12\x12\n" +
 	"\x04name\x18\x02 \x01(\tR\x04name\"*\n" +
 	"\x05Users\x12!\n" +
-	"\x05users\x18\x01 \x03(\v2\v.proto.UserR\x05users2A\n" +
+	"\x05users\x18\x01 \x03(\v2\v.proto.UserR\x05users2k\n" +
 	"\vUserService\x122\n" +
-	"\bGetUsers\x12\x16.google.protobuf.Empty\x1a\f.proto.Users\"\x00B6Z4github.com/alimikegami/go-monorepo/grpc-server/protob\x06proto3"
+	"\bGetUsers\x12\x16.google.protobuf.Empty\x1a\f.proto.Users\"\x00\x12(\n" +
+	"\n" +
+	"CreateUser\x12\v.proto.User\x1a\v.proto.User\"\x00B6Z4github.com/alimikegami/go-monorepo/grpc-server/protob\x06proto3"
 
 var (
 	file_grpc_server_proto_user_proto_rawDescOnce sync.Once
@@ -152,9 +154,11 @@ var file_grpc_server_proto_user_proto_goTypes = []any{
 var file_grpc_server_proto_user_proto_depIdxs = []int32{
 	0, // 0: proto.Users.users:type_name -> proto.User
 	2, // 1: proto.UserService.GetUsers:input_type -> google.protobuf.Empty
-	1, // 2: proto.UserService.GetUsers:output_type -> proto.Users
-	2, // [2:3] is the sub-list for method output_type
-	1, // [1:2] is the sub-list for method input_type
+	0, // 2: proto.UserService.CreateUser:input_type -> proto.User
+	1, // 3: proto.UserService.GetUsers:output_type -> proto.Users
+	0, // 4: proto.UserService.CreateUser:output_type -> proto.User
+	3, // [3:5] is the sub-list for method output_type
+	1, // [1:3] is the sub-list for method input_type
 	1, // [1:1] is the sub-list for extension type_name
 	1, // [1:1] is the sub-list for extension extendee
 	0, // [0:1] is the sub-list for field type_name

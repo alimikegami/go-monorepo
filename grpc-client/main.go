@@ -36,4 +36,21 @@ func main() {
 	}
 
 	log.Printf("Response from server: %+v", response.Users)
+
+	req := &proto.User{
+		Name: "Testing",
+	}
+
+	_, err = client.CreateUser(ctx, req)
+	if err != nil {
+		log.Fatalf("Failed to get response: %v", err)
+	}
+
+	response, err = client.GetUsers(ctx, request)
+	if err != nil {
+		log.Fatalf("Failed to get response: %v", err)
+	}
+
+	log.Printf("Response from server: %+v", response.Users)
+
 }
